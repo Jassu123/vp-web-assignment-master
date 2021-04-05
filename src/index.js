@@ -7,14 +7,14 @@ import App from './App';
 export async function getWatchedMovies() {
 	let url = 'http://localhost:2021/api/movies/watched'
 	try {
-		let res = await axios.get(url)
-		console.log(res)
+		let res = await axios.get(url);
 		let movies = res.data
+		console.log(movies)
 		return movies
 
 	}
 	catch(e){
-
+console.log(e)
 	}
 	// var movies = localStorage.getItem('movies-watched');
 
@@ -30,13 +30,12 @@ export async function getAllMovies() {
 	 let url = 'http://localhost:2021/api/movies'
 	 try {
 		 let res = await axios.get(url)
-		 console.log(res)
 		 let movies = res.data
 		 return movies
 
 	 }
 	 catch(e){
-
+console.log(e)
 	 }
 	
 	// if (!movies) {
